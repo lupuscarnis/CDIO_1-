@@ -1,5 +1,5 @@
 package test;
 
-public class Dice {
+public class Terning {
 
 }
