@@ -10,6 +10,8 @@ public class Spillet {
 		
 		Frederik var her
 	//Hej hilsen Fredrik
+		
+		//Flotfyr23
 	
 	}
 	
