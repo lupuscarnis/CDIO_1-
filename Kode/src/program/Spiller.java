@@ -13,6 +13,18 @@ public class Spiller {
 	}
 
 	public void kastTerninger() {
+		// kast
 		_bæger.Kast();
+
+		// opdater points
+		_points += _bæger.getSumAfØjne();
+	}
+
+	public String getNavn() {
+		return _navn;
+	}
+
+	public int getPoint() {
+		return _points;
 	}
 }
