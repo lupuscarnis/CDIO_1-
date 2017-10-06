@@ -9,7 +9,13 @@ public class Spillet {
 		System.out.println("Hello world!");
 		
 		
+<<<<<<< HEAD
 		
+=======
+		Frederik var her
+	//Hej hilsen Fredrik
+	
+>>>>>>> b3765a190cfc612450361956edf7c13a6a8df908
 	}
 	
 }
