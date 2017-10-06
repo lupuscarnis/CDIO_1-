@@ -30,7 +30,6 @@ public class Spil {
 			System.out.println();
 			spiller2.kastTerninger();
 			System.out.printf("%s har nu %s point.", spiller2.getNavn(), spiller2.getPoint());
-
 			System.out.println();
 
 			// Check at spiller 2 ikke har fundet
