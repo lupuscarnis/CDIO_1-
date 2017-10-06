@@ -2,16 +2,15 @@ package program;
 
 public class Terning {
 
-	private final int MIN = 2, MAX = 12;
 	private int _øjne;
 
 	public Terning() {
-		this._øjne = MyRandom.randInt(MIN, MAX);
+		this._øjne = MyRandom.randInt(Spil.MIN, Spil.MAX);
 	}
 
 	public void rul() {
 
-		this._øjne = MyRandom.randInt(MIN, MAX);
+		this._øjne = MyRandom.randInt(Spil.MIN, Spil.MAX);
 
 		System.out.println("Terningen rullede " + _øjne);
 	}

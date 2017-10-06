@@ -1,9 +1,9 @@
 package program;
 
-import java.util.Random;
-
 public class Spil {
 
+	public final static int MIN = 2;
+	public final static int MAX = 12;	
 	private final static int POINTSVUNDET = 40;
 
 	public static void main(String[] args) {
