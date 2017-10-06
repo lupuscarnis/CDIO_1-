@@ -57,5 +57,15 @@ public class TerningTest {
 		assertTrue(terning.getÿjne() >= Spil.MIN);
 		assertTrue(terning.getÿjne() <= Spil.MAX);
 	}
+	
+	@Test
+	public void rul_ViserKorrektÿjneEfter10000Rul_ViserRetteVÊrdi() {
+				
+		for (int i = 0; i < 10000; i++) {
+			terning.rul();
+			
+			assertTrue(terning.getÿjne() >= Spil.MIN && terning.getÿjne() <= Spil.MAX);			
+		}
+	}
 
 }
