@@ -13,6 +13,13 @@ public class Bæger {
 		terning2.rul();
 	}
 
+	public Terning getTerning1() {
+		return terning1;
+	}
+	public Terning getTerning2() {
+		return terning2;
+	}
+	
 	public int getSumAfØjne() {
 		return terning1.getØjne() + terning2.getØjne();
 	}

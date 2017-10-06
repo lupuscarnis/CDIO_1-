@@ -54,8 +54,7 @@ public class TerningTest {
 
 	@Test
 	public void getØjne_KorrektØjneEfterInstantiering_ReturnsTrue() {
-		assertTrue(terning.getØjne() >= Spil.MIN);
-		assertTrue(terning.getØjne() <= Spil.MAX);
+		assertTrue(terning.getØjne() >= Spil.TERNING_MIN && terning.getØjne() <= Spil.TERNING_MAX);
 	}
 
 	@Test
@@ -64,7 +63,7 @@ public class TerningTest {
 		for (int i = 0; i < 10000; i++) {
 			terning.rul();
 
-			assertTrue(terning.getØjne() >= Spil.MIN && terning.getØjne() <= Spil.MAX);
+			assertTrue(terning.getØjne() >= Spil.TERNING_MIN && terning.getØjne() <= Spil.TERNING_MAX);
 		}
 	}
 
