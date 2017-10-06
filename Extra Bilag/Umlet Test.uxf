@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>90</x>
+      <y>140</y>
+      <w>60</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Spiller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>210</x>
+      <y>130</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Use case 1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>210</x>
+      <y>240</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Use case 2</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
