@@ -2,6 +2,10 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.util.Dictionary;
+import java.util.Hashtable;
+import java.util.Iterator;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -43,4 +47,35 @@ public class BægerTest {
 		}
 	}
 
+	@Test
+	public void Bæger_testForKorrekteSandsynlighederOver10000Kast() {
+
+		int antalKørsler = 10000;
+		int[] tmp = new int[11];
+
+		for (int i = 0; i < tmp.length; i++) {
+			tmp[i] = 0;
+		}
+
+		for (int i = 0; i < antalKørsler; i++) {
+
+			// kast
+			b.Kast();
+
+			// hent sum
+			int sum = b.getSumAfØjne();
+
+			tmp[(sum - 2)]++;
+		}
+
+		System.out.println("Udskriv test array; ");
+
+		for (int i = 0; i < tmp.length; i++) {
+
+			int sum = tmp[i];
+			double procent = (sum / (double) antalKørsler) * 100;
+
+			System.out.println("Sum: " + (i + 2) + " Antal: " + sum + " Procent: " + procent + "%");
+		}
+	}
 }

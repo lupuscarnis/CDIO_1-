@@ -21,6 +21,6 @@ public class Bæger {
 	}
 	
 	public int getSumAfØjne() {
-		return terning1.getØjne() + terning2.getØjne();
+		return (terning1.getØjne() + terning2.getØjne());
 	}
 }

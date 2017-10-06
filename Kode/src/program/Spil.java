@@ -2,7 +2,7 @@ package program;
 
 public class Spil {
 
-	public final static int TERNING_MIN = 2;
+	public final static int TERNING_MIN = 1;
 	public final static int TERNING_MAX = 6;
 	public final static int SUM_MIN = 2;
 	public final static int SUM_MAX = 12;
