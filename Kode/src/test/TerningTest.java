@@ -53,18 +53,18 @@ public class TerningTest {
 	}
 
 	@Test
-	public void getÿjne_KorrektÿjneEfterInstantiering_ReturnsTrue() {
-		assertTrue(terning.getÿjne() >= Spil.MIN);
-		assertTrue(terning.getÿjne() <= Spil.MAX);
+	public void get√òjne_Korrekt√òjneEfterInstantiering_ReturnsTrue() {
+		assertTrue(terning.get√òjne() >= Spil.MIN);
+		assertTrue(terning.get√òjne() <= Spil.MAX);
 	}
-	
+
 	@Test
-	public void rul_ViserKorrektÿjneEfter10000Rul_ViserRetteVÊrdi() {
-				
+	public void rul_ViserKorrekt√òjneEfter10000Rul_ViserRetteV√¶rdi() {
+
 		for (int i = 0; i < 10000; i++) {
 			terning.rul();
-			
-			assertTrue(terning.getÿjne() >= Spil.MIN && terning.getÿjne() <= Spil.MAX);			
+
+			assertTrue(terning.get√òjne() >= Spil.MIN && terning.get√òjne() <= Spil.MAX);
 		}
 	}
 

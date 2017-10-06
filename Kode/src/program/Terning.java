@@ -2,20 +2,20 @@ package program;
 
 public class Terning {
 
-	private int _øjne;
+	private int _Ã¸jne;
 
 	public Terning() {
-		this._øjne = MyRandom.randInt(Spil.MIN, Spil.MAX);
+		this._Ã¸jne = MyRandom.randInt(Spil.MIN, Spil.MAX);
 	}
 
 	public void rul() {
 
-		this._øjne = MyRandom.randInt(Spil.MIN, Spil.MAX);
+		this._Ã¸jne = MyRandom.randInt(Spil.MIN, Spil.MAX);
 
-		System.out.println("Terningen rullede " + _øjne);
+		System.out.println("Terningen rullede " + _Ã¸jne);
 	}
 
-	public int getØjne() {
-		return _øjne;
+	public int getÃ˜jne() {
+		return _Ã¸jne;
 	}
 }

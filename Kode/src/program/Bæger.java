@@ -1,9 +1,9 @@
 package program;
 
-public class BÊger {
+public class B√¶ger {
 	private Terning terning1, terning2;
 
-	public BÊger() {
+	public B√¶ger() {
 		this.terning1 = new Terning();
 		this.terning2 = new Terning();
 	}
@@ -13,7 +13,7 @@ public class BÊger {
 		terning2.rul();
 	}
 
-	public int getSumAfÿjne() {
-		return terning1.getÿjne() + terning2.getÿjne();
+	public int getSumAf√òjne() {
+		return terning1.get√òjne() + terning2.get√òjne();
 	}
 }

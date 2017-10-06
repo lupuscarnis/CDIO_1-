@@ -4,20 +4,20 @@ public class Spiller {
 
 	private String _navn;
 	private int _points;
-	private Bæger _bæger;
+	private BÃ¦ger _bÃ¦ger;
 
 	public Spiller(String navn) {
 		this._points = 0;
 		this._navn = navn;
-		this._bæger = new Bæger();
+		this._bÃ¦ger = new BÃ¦ger();
 	}
 
 	public void kastTerninger() {
 		// kast
-		_bæger.Kast();
+		_bÃ¦ger.Kast();
 
 		// opdater points
-		_points += _bæger.getSumAfØjne();
+		_points += _bÃ¦ger.getSumAfÃ˜jne();
 	}
 
 	public String getNavn() {
