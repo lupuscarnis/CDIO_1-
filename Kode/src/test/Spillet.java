@@ -16,3 +16,8 @@ public class Spillet {
 	}
 	
 }
+
+
+
+
+// Elias var her
