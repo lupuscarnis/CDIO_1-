@@ -1,4 +1,4 @@
-package test;
+package program;
 
 public class Terning {
 
