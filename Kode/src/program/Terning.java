@@ -12,7 +12,7 @@ public class Terning {
 
 		this._øjne = MyRandom.randInt(Spil.TERNING_MIN, Spil.TERNING_MAX);
 
-		System.out.println("Terningen rullede " + _øjne);
+		//System.out.println("Terningen rullede " + _øjne);
 	}
 
 	public int getØjne() {
