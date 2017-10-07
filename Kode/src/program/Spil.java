@@ -1,9 +1,5 @@
 package program;
 
-import gui.Game;
-import gui.MainScreen;
-import gui.Welcome;
-
 public class Spil {
 
 	public final static int TERNING_MIN = 1;
@@ -13,19 +9,6 @@ public class Spil {
 	private final static int POINTSVUNDET = 40;
 
 	public static void main(String[] args) {
-		
-		
-		//Welcome scr = new Welcome();
-		Game scr = new Game();
-		scr.setVisible(true);
-		
-		
-		
-		
-		
-		
-		
-		/*
 		Spiller spiller1 = new Spiller("Nynne");
 		Spiller spiller2 = new Spiller("Eskild");
 
@@ -59,7 +42,7 @@ public class Spil {
 				break;
 			}
 			System.out.println();	
-		}*/
+		}
 	}
 
 	private static boolean hasWon(Spiller spiller) {
