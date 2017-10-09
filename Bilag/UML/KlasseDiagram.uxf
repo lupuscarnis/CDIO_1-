@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>110</y>
+      <w>40</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=2
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>390</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>430</y>
+      <w>40</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=2
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>550</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Terning
+--
+øjne : int
+--
+getØjne: int
+rul : void
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>310</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Spiller
+
+--
+navn : string
+points : int
+
+--
+kastTerning: void
+getNavn : String
+getPoints : int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>250</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Bæger
+
+--
+kast : void
+
+getTerning1(): terning
+getTerning2(): terning
+getSumAfØjne
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>0</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Spill
+--
+hasWon : boolean
+main : void
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
