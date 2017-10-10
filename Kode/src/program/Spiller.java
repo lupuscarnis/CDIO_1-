@@ -27,4 +27,7 @@ public class Spiller {
 	public int getPoint() {
 		return _points;
 	}
+	public Bæger getBæger() {
+		return _bæger;
+	}
 }
