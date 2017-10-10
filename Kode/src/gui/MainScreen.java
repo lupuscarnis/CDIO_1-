@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import program.Bæger;
 import program.Spiller;
 
 public class MainScreen extends MyFrame implements ActionListener {
@@ -64,8 +65,8 @@ public class MainScreen extends MyFrame implements ActionListener {
 
 		// TODO: Check for validt input!
 
-		Spiller s1 = new Spiller(tf1.getText());
-		Spiller s2 = new Spiller(tf2.getText());
+		Spiller s1 = new Spiller(tf1.getText(), new Bæger());
+		Spiller s2 = new Spiller(tf2.getText(),new Bæger());
 
 		this.setVisible(false);
 

@@ -6,12 +6,15 @@ import java.awt.Dialog;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import program.KastResult;
 import program.Spil;
 import program.Spiller;
 
@@ -25,6 +28,9 @@ public class Game extends MyFrame implements ActionListener {
 	JLabel lblSp1 = null;
 	JLabel lblSp2 = null;
 
+	JLabel lblStatusTerning1 = null;
+	JLabel lblStatusTerning2 = null;
+
 	Spiller s1 = null;
 	Spiller s2 = null;
 
@@ -36,9 +42,13 @@ public class Game extends MyFrame implements ActionListener {
 
 		lblSp1 = new JLabel();
 		lblSp2 = new JLabel();
+
+		lblStatusTerning1 = new JLabel("");
+		lblStatusTerning2 = new JLabel("");
+
 		this.setTitle("Så skal der spilles!");
 		Container cp = this.getContentPane();
-		cp.setLayout(new GridLayout(3, 1));
+		cp.setLayout(new GridLayout(4, 1));
 		btn = new JButton();
 		btn.addActionListener(this);
 
@@ -48,12 +58,17 @@ public class Game extends MyFrame implements ActionListener {
 		JPanel pnlSp2 = new JPanel();
 		pnlSp2.add(lblSp2);
 
-		JPanel pnl3 = new JPanel();
+		JPanel pnl3 = new JPanel(new GridLayout(2, 1));
+		pnl3.add(lblStatusTerning1);
+		pnl3.add(lblStatusTerning2);
+
+		JPanel pnl4 = new JPanel();
 		pnl3.add(btn);
 
 		cp.add(pnlSp1);
 		cp.add(pnlSp2);
 		cp.add(pnl3);
+		cp.add(pnl4);
 
 		setButtonText(true);
 		opdaterPoints();
@@ -66,37 +81,52 @@ public class Game extends MyFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		// kast terninger
-		if (playerOnesTurn) {
-			s1.kastTerninger();
-			checkIfWon();
-		} else {
-			s2.kastTerninger();
-			checkIfWon();
+		if (playerOnesTurn)
+			metode(s1);
+		else
+			metode(s2);
+	}
+
+	private void metode(Spiller spiller) {
+
+		Boolean ekstraTur = false;
+		KastResult result = spiller.kastTerninger();
+
+		// Sæt værdi af terning
+		lblStatusTerning1.setText("Terning 1: " + spiller.getBæger().getTerning1().getØjne());
+		lblStatusTerning2.setText("Terning 2: " + spiller.getBæger().getTerning2().getØjne());
+
+		switch (result) {
+
+		case PointsTabt:
+			Spil.VisDialog(this, spiller.getNavn() + " slog to ettere og taber alle sine points!");
+			break;
+
+		case EkstraTur:
+			ekstraTur = true;
+			Spil.VisDialog(this, spiller.getNavn() + " slog to ens og må kaste igen!");
+			break;
+
+		case SpilVundet:
+			Spil.VisDialog(this, spiller.getNavn() + " har vundet!");
+			_parent.setVisible(true);
+			this.dispose();
+			break;
+
+		case FortsætSpil:
+			System.out.println("Fortsæt spil");
+			break;
 		}
-		// Skift tekst på knap
-		setButtonText(false);
 
 		// Opdater points
 		opdaterPoints();
 
-		// Opdater spillertur
-		setPlayerTurn();
-	}
+		if (!ekstraTur) {
+			// Skift tekst på knap
+			setButtonText(false);
 
-	private void checkIfWon() {
-		if (playerOnesTurn) {
-			if (s1.getPoint() >= Spil.POINTSVUNDET) {
-				JOptionPane.showMessageDialog(this, s1.getNavn() + " har vundet!");
-				_parent.setVisible(true);
-				this.dispose();
-			}
-		} else {
-			if (s2.getPoint() >= Spil.POINTSVUNDET) {
-				JOptionPane.showMessageDialog(this, s2.getNavn() + " har vundet!");
-
-				this.dispose();
-				_parent.setVisible(true);
-			}
+			// Opdater spillertur
+			setPlayerTurn();
 		}
 	}
 
