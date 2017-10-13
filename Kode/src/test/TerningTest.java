@@ -58,9 +58,9 @@ public class TerningTest {
 	}
 
 	@Test
-	public void rul_ViserKorrektØjneEfter10000Rul_ViserRetteVærdi() {
+	public void rul_ViserKorrektØjneEfter1000Rul_ViserRetteVærdi() {
 
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			terning.rul();
 
 			assertTrue(terning.getØjne() >= Spil.TERNING_MIN && terning.getØjne() <= Spil.TERNING_MAX);
