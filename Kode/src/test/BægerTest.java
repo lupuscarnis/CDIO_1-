@@ -50,7 +50,7 @@ public class BægerTest {
 	@Test
 	public void Bæger_testForKorrekteSandsynlighederOver10000Kast() {
 
-		int antalKørsler = 10000;
+		int antalKørsler = 2000000;
 		int[] tmp = new int[11];
 
 		for (int i = 0; i < tmp.length; i++) {
@@ -75,7 +75,7 @@ public class BægerTest {
 			int sum = tmp[i];
 			double procent = (sum / (double) antalKørsler) * 100;
 
-			System.out.println("Sum: " + (i + 2) + " Antal: " + sum + " Procent: " + procent + "%");
+			System.out.println("Sum: " + (i + 2) + " Antal: " + sum + " Procent: " + Math.round(procent*100.0)/100.0 + "%");
 		}
 	}
 }
