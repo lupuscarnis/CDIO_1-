@@ -58,12 +58,47 @@ public class TerningTest {
 	}
 
 	@Test
-	public void rul_ViserKorrektØjneEfter10000Rul_ViserRetteVærdi() {
+	public void rul_ViserKorrektØjneEfter1000Rul_ViserRetteVærdi() {
 
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			terning.rul();
 
 			assertTrue(terning.getØjne() >= Spil.TERNING_MIN && terning.getØjne() <= Spil.TERNING_MAX);
+		}
+	}
+	
+	@Test
+	public void testFordelingAfØjne() {
+		
+		int antalKørsler = 1000;
+		int[] tmp = new int[6];
+
+		for (int i = 0; i < tmp.length; i=i+1) {
+			tmp[i] = 0;
+		}
+
+		for (int i = 0; i < antalKørsler; i=i+1) {
+
+			// kast to terninger
+			terning.rul();
+
+			// hent sum
+			int vat = terning.getØjne();
+			tmp[(vat-1)]++;
+
+		}
+
+		System.out.println("Udskriv test array; ");
+		double out = 16.66;
+		for (int i = 0; i < tmp.length; i++) {
+			int sum = tmp[i];
+			
+			double procent = Math.round(((sum / (double) antalKørsler) * 100)*100.00)/100.00;
+			double afvigelse = Math.round((procent-out)*100.00)/100.00;
+			System.out.println("Sum: " + (i + 2) + " Antal: " + sum + " Procent: " + procent + "% " + "Afvigelse: " + afvigelse + "%");
+			
+			assertTrue(afvigelse/procent<0.05);
+
 		}
 	}
 
