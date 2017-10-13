@@ -110,7 +110,7 @@ public class Game extends MyFrame implements ActionListener {
 		case SpilVundet:
 			Spil.VisDialog(this, spiller.getNavn() + " har vundet!");
 			_parent.setVisible(true);
-			this.dispose(); 
+			this.dispose();
 			break;
 
 		case FortsætSpil:
