@@ -111,7 +111,7 @@ getSumAfØjne
       <w>210</w>
       <h>120</h>
     </coordinates>
-    <panel_attributes>Spill
+    <panel_attributes>Spil
 --
 hasWon : boolean
 main : void
