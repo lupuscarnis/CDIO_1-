@@ -1,27 +1,33 @@
 
+
 public class PlayerAccount {
 
-	private int balance;
+	public int balance;
+	public int value;
+	public boolean tjek;
 	
 	public PlayerAccount() {
 		
 		balance=1000;
 	}
 	
-	withdraw() {
+  public deposit(int value) {
+	balance+=value;
+		
+	if (value<=0)
+	{
+	tjek=true;
 	
-		
-		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+    if (value<0)
+    {tjek=false;	
+
+	}
+		
+    return tjek;
+  
+  }
 	
 	
 	
