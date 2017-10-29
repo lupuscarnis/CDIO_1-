@@ -11,7 +11,7 @@ public class PlayerAccount {
 		balance=1000;
 	}
 	
-  public deposit(int value) {
+  public boolean deposit(int value) {
 	balance+=value;
 		
 	if (value<=0)
@@ -29,6 +29,17 @@ public class PlayerAccount {
   
   }
 	
+  public boolean withdraw(int value)
+  {
+	  balance+=value;
+	  
+	  
+	  
+	  
+	  
+	  
+  }
+  }
 	
 	
 }
