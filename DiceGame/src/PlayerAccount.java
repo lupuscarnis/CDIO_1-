@@ -11,10 +11,28 @@ public class PlayerAccount {
 		balance=1000;
 	}
 	
+	
+	 public int getBalance()
+	  {
+		 System.out.println(balance);
+		  return balance;
+		  
+	  }
+	  
+	  int setBalance(int newBalance)
+	  {
+	  newBalance=balance;
+	  
+	  return balance;
+	  }
+	
   public boolean deposit(int value) {
-	balance+=value;
-		
-	if (value<=0)
+	
+	  balance+=value;
+	
+	  setBalance(balance);
+	
+	  if (value<=0)
 	{
 	tjek=true;
 	
@@ -33,14 +51,31 @@ public class PlayerAccount {
   {
 	  balance+=value;
 	  
+	  setBalance(balance);
 	  
-	  
-	  
+	  return tjek;
 	  
 	  
   }
+  
+ 
+  
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 	
 	
-}
+
 
