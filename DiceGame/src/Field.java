@@ -26,7 +26,7 @@ public class Field {
 	
 	public int findField(int getSum){
 		// getsum her defineres som en int, skal vaere en metode defineret i Cup. Har bare lavet en
-		// getSum int for at jeg kan se om tingen fungerer.
+		// getSum int for at jeg kan se om tingene fungerer.
 	 
 		
 	if (getSum==2)
